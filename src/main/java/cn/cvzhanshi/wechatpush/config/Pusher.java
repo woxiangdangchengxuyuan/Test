@@ -31,14 +31,14 @@ public class Pusher {
         WxMpTemplateMessage templateMessage = WxMpTemplateMessage.builder()
 //                .toUser("oV9pc5oL8GHrGwYZolFqsJ8us1f8")
                 .toUser("oV9pc5rAA0C4Qmf89uNtDaQ94KsA")//用户微信id
-                .templateId("v6pi1uZbsmdpp4ebNX4QUypANnk88N5mFHZxdnbhv_0")//消息模板id
+                .templateId("uIwHF_MdL1Ho9ZFoIAlqeJUpeiXcQEGhlNkDvI9_Eic")//消息模板id
                 .build();
         //3,如果是正式版发送模版消息，这里需要配置你的信息
         Weather weather = WeatherUtils.getWeather();
         Map<String, String> map = CaiHongPiUtils.getEnsentence();
         templateMessage.addData(new WxMpTemplateData("riqi", weather.getDate() + "  " + weather.getWeek(), "#00BFFF"));
         templateMessage.addData(new WxMpTemplateData("tianqi", weather.getText_now(), "#00FFFF"));
-        templateMessage.addData(new WxMpTemplateData("low", weather.getLow() + "", "#173177"));
+        templateMessage.addData(new WxMpTemplateData("low", weather.getLow() + "", "#8B0000"));
         templateMessage.addData(new WxMpTemplateData("temp", weather.getTemp() + "", "#EE212D"));
         templateMessage.addData(new WxMpTemplateData("high", weather.getHigh() + "", "#FF6347"));
         templateMessage.addData(new WxMpTemplateData("windclass", weather.getWind_class() + "", "#42B857"));

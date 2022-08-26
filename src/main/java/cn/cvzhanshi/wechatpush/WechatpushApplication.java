@@ -12,12 +12,12 @@ public class WechatpushApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(WechatpushApplication.class, args);
-    }
-
-
-    @Scheduled(cron = "0 30 7 * * ?")
-    public void goodMorning() {
         Pusher.push();
     }
 
+
+//    @Scheduled(cron = "0 30 7 * * ?")
+//    public void goodMorning() {
+//        Pusher.push();
+//    }
 }
